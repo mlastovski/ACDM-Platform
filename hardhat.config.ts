@@ -17,6 +17,12 @@ import "./tasks/ACDMToken/mint.ts";
 import "./tasks/ACDMToken/burn.ts";
 import "./tasks/ACDMToken/balanceOf.ts";
 
+// add staking
+
+// add dao
+
+// add acdmplatform
+
 dotenv.config();
 
 task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
