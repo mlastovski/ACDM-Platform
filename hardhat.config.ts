@@ -19,8 +19,6 @@ import "./tasks/ACDMToken/balanceOf.ts";
 
 dotenv.config();
 
-// This is a sample Hardhat task. To learn how to create your own go to
-// https://hardhat.org/guides/create-task.html
 task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
   const accounts = await hre.ethers.getSigners();
 
@@ -28,9 +26,6 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
     console.log(account.address);
   }
 });
-
-// You need to export an object to set up your config
-// Go to https://hardhat.org/config/ to learn more
 
 const config: HardhatUserConfig = {
   solidity: {
@@ -43,11 +38,11 @@ const config: HardhatUserConfig = {
     }
   },
 
-  // contractSizer: {
-  //   alphaSort: true,
-  //   runOnCompile: true,
-  //   disambiguatePaths: false,
-  // },
+  contractSizer: {
+    alphaSort: true,
+    runOnCompile: true,
+    disambiguatePaths: false,
+  },
 
   networks: {
     rinkeby: {
@@ -58,8 +53,7 @@ const config: HardhatUserConfig = {
 
     hardhat: {
       forking: {
-        // url: process.env.ALCHEMY_URL as string,
-        url: "https://eth-rinkeby.alchemyapi.io/v2/or8rc_scY44QrvZWM1i_p32do5Ng5I7K",
+        url: process.env.ALCHEMY_URL as string,
         enabled: true,
       }
     },
@@ -82,11 +76,11 @@ const config: HardhatUserConfig = {
     currency: "USD",
   },
   
-  // docgen: {
-  //   path: './docs',
-  //   clear: true,
-  //   runOnCompile: false,
-  // } 
+  docgen: {
+    path: './docs',
+    clear: true,
+    runOnCompile: false,
+  } 
 };
 
 export default config;
