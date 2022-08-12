@@ -17,11 +17,21 @@ import "./tasks/ACDMToken/mint.ts";
 import "./tasks/ACDMToken/burn.ts";
 import "./tasks/ACDMToken/balanceOf.ts";
 
-// add staking
+import "./tasks/Staking/stake.ts";
+import "./tasks/Staking/claim.ts";
 
-// add dao
+import "./tasks/DAO/addProposal.ts";
+import "./tasks/DAO/initialize.ts";
+import "./tasks/DAO/vote.ts";
+import "./tasks/DAO/finish.ts";
 
-// add acdmplatform
+import "./tasks/ACDMPlatform/addOrder.ts";
+import "./tasks/ACDMPlatform/buyACDM.ts";
+import "./tasks/ACDMPlatform/redeemOrder.ts";
+import "./tasks/ACDMPlatform/register.ts";
+import "./tasks/ACDMPlatform/removeOrder.ts";
+import "./tasks/ACDMPlatform/startSaleRound.ts";
+import "./tasks/ACDMPlatform/startTradeRound.ts";
 
 dotenv.config();
 
