@@ -4,12 +4,11 @@ pragma solidity ^0.8.11;
 import "./interfaces/IStaking.sol";
 import "@openzeppelin/contracts/interfaces/IERC20.sol";
 import "@openzeppelin/contracts/access/AccessControl.sol";
-import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 
 /// @title DAO contract for the ACDM Platform
 /// @author mlastovski
-contract DAO is AccessControl, ReentrancyGuard {
+contract DAO is AccessControl {
     using Counters for Counters.Counter;
     Counters.Counter private _proposalId;
 
